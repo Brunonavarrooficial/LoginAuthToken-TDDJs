@@ -28,7 +28,7 @@ describe('Authentication', () => {
         const user = await User.create({
             name: 'Bruno',
             email: 'bnacessoria@gmail.com',
-            passowor_hash: '123456',
+            passoword: '123456',
         })
 
         const response = await request(app)
@@ -39,6 +39,23 @@ describe('Authentication', () => {
             })
 
         expect(response.status).toBe(200)
+    })
+
+    it('should not authenticate with invalid credentiials', async () => {
+        const user = await User.create({
+            name: 'Bruno',
+            email: 'bnacessoria@gmail.com',
+            passoword: '123456',
+        })
+
+        const response = await request(app)
+            .post('/sessions')
+            .send({
+                email: user.email,
+                password: '123123'
+            })
+
+        expect(response.status).toBe(401)
     })
 })
 

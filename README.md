@@ -6,6 +6,7 @@ Aplicação de login e authenticação usando boas praticas de arquitetura, clea
 
 ```
 "dependencies": {
+  "bcryptjs": "^2.4.3",
    "dotenv": "^16.0.3",
    "express": "^4.18.2",
    "mariadb": "^3.0.2",
@@ -23,6 +24,10 @@ Aplicação de login e authenticação usando boas praticas de arquitetura, clea
 
 > Utilizando:
 
+`bcryptjs` para criar hash de senha alternativo
+e usando `bcryptjs.compare` para comparar as senhas
+hash dos testes com o banco de dados
+
 `dotenv` para ultilizar variáveis de ambiente
 de arquivo `.env`
 
@@ -30,7 +35,7 @@ de arquivo `.env`
 
 utilizando controllers para rotas de teste 👇🏻
 
-<img src='./assets/projectJs.png' alt="graphml-files" style="height: 150px; width:250px;"/>
+<img src='./assets/projectJs.png' alt="graphml-files" />
 
 ---
 
