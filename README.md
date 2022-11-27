@@ -9,6 +9,7 @@ Aplicação de login e authenticação usando boas praticas de arquitetura, clea
   "bcryptjs": "^2.4.3",
    "dotenv": "^16.0.3",
    "express": "^4.18.2",
+   "jsonwebtoken": "^8.5.1",
    "mariadb": "^3.0.2",
    "pg": "^8.8.0",
    "sequelize": "^6.25.8"
@@ -28,8 +29,32 @@ Aplicação de login e authenticação usando boas praticas de arquitetura, clea
 e usando `bcryptjs.compare` para comparar as senhas
 hash dos testes com o banco de dados
 
+`jsonwebtoken` para decotificar token de cada usuario criado
+
 `dotenv` para ultilizar variáveis de ambiente
 de arquivo `.env`
+
+Variaveis de ambiente utilizadas no projeto 👇🏻
+
+> #### .env
+
+```
+APP_SECRET
+DATABASE
+DATABASE_DIALECT
+DATABASE_HOST
+DATABASE_PORT
+DATABASE_USERNAME
+DATABASE_PASSWORD
+```
+
+> #### .env.test
+
+```
+APP_SECRET
+DATABASE_DIALECT
+
+```
 
 `express` e `nodemon` pra conexão e rotas
 
