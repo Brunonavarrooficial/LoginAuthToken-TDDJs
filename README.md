@@ -80,7 +80,7 @@ de docker
 
 em `jest.config.js` habilitado modo _coverageDirectory_ 👇🏻
 
-![coverrage](./__tests__/coverage/icov-report/favicon.png)
+![coverrage](./assets/favicon.png)
 [coverage-file](./__tests__/coverage/lcov-report/index.html)
 
 `sqlite3` para armazenar migrates de teste em desenvolvimento
